@@ -6,7 +6,7 @@ my_tsn = tsn.TSN()
 
 stream_pages = my_tsn.getLiveStreamPage()
 print stream_pages
-if len(stream_pages) == 0:
+if stream_pages == None:
     print "Currently, there appear to be no live streams"
     sys.exit(1)
 

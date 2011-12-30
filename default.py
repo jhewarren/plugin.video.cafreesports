@@ -45,7 +45,7 @@ def createTSNMenu():
     my_tsn = tsn.TSN()
 
     stream_pages = my_tsn.getLiveStreamPage()
-    if len(stream_pages) == 0:
+    if stream_pages == None:
         print "No TSN stream pages linked"
         xbmcplugin.endOfDirectory(handle=int(sys.argv[1]))
         return

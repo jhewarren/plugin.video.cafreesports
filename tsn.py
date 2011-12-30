@@ -90,8 +90,11 @@ class TSN:
 
         return links
 
+
     def getTitleInDiv(self, link, div_html):
-        
+        """
+        Attempt to get a title from teh <div/> tag.
+        """
         title = link
 
         # see if there is an H2 to use
@@ -106,6 +109,7 @@ class TSN:
                 return match.group(1)
 
         return None
+
 
     def getLiveStreamPage2(self):
         """
@@ -150,7 +154,8 @@ class TSN:
         
         # return the page containing the stream
         return page_html[start_idx+9:start_idx + end_idx]
-    
+
+
     def getRTMPStream(self, stream_page):
         """
         Get the RTMP stream of the live event
